@@ -1,3 +1,15 @@
 Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
 
+1. IAM policy allowing full access to resources
+2. Loadbalancer does not have HTTP->HTTPS redirection
+3. The VPC default security group allow all inbound and outbound traffic which violates the AWS recommendation
+4. EC2 instance TCP port 5000 is reachable from internet
+5. Server-side encryption and logging is not enabled for S3 buckets
+
 Bonus - provide recommendations on how to remediate the vulnerabilities.
+
+1. Set IAM policies for not allowing root user and to enforce MFA, as well as the specific permissions
+2. Application Load Balancer should be configured to redirect all HTTP requests to HTTPS
+3. Limit the traffic on the Security Groups only allow 80 and 443
+4. Disable all other non-necessary ports on the EC2 instance
+5. Enable server-side encryption and logging for S3 bucket

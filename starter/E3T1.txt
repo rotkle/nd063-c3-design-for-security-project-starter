@@ -1,3 +1,10 @@
 # Describe GuardDuty findings that were detected related to the brute force attack
 
+AWS GuardDuty had 2 findings:
+- One of the instances was being used to perform an SSH brute force attack
+- One of the instances was being attacked by an SSH brute force attack
+
 # Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+
+- The logs show huge number of requests being sent from the an instance to a specific IP indicating that the instance is being used for an SSH brute force attack
+- The logs also show a good number of requests sent to the other instance from a specific IP indicating that the instance is being used for an SSH brute force attack
