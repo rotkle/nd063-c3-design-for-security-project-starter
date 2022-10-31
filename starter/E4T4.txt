@@ -1,8 +1,16 @@
 
 # What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
 
+Add CloudFront in front of the load balancer and removes all external access to the instances by apply ssh rules to instances through AWS Systems Manager 
+
 # Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+
+VPC private endpoints alone would not prevent the unauthorized access to the secrets bucket
 
 # Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
 
+No, new files or objects will not get effected. You would need to encrypt all the files as well
+
 # What would happen if the original cloud formation templates are applied to this environment.
+
+All changes that have been made to the original CloudFormation will be reset

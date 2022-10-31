@@ -2,12 +2,26 @@
 
 ## Scan infrastructure as code templates
 
+- Checkov: https://www.checkov.io
+
 ### Example vulnerability
+
+- "Ensure no security groups allow ingress from 0.0.0.0:0 to port 22"
+- "Ensure all data stored in the S3 bucket is securely encrypted at rest"
 
 ##Scan AMI’s or containers for OS vulnerabilities
 
+- Ansible
+
 ### Example vulnerability
+
+- The SSH daemon must not allow authentication using an empty password
 
 ##Scan an AWS environment for cloud configuration vulnerabilities
 
+- AWS Config
+- AWS GuardDuty
+
 ### Example vulnerability
+
+- s3-bucket-server-side-encryption-enabled
